@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Grid Generator</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300|Roboto:300,400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="styles/bundle.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+    <script src="scripts/bundle.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <a href="/">
+              <img src="images/logo.svg" alt="">
+            </a>
+          </div>
+          <div class="header__text col-lg-7 col-lg-offset-1">
+            Setki is an online instrument that allows you to create
+            your own full-featured bootstrap-like grids.
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="container">
+      <div class="welcome row">
+        <div class="col-lg-1" style="width: 117px;">
+          <img class="welcome__icon" src="images/list.svg" alt="">
+        </div>
+        <div class="col-lg-6">
+          <p class="welcome__title">
+            LET’S GO!
+          </p>
+          <p class="welcome__message">
+            Just fill the form below
+            <br>and copy resulted CSS to your project.
+          </p>
+        </div>
+      </div>
+      <p class="form-title" style="margin-top: 0;">
+        Class Names:
+      </p>
+      <div id="app">
+        <!--
+        <form class="col-lg-8">
+          <div class="form-element row">
+            <div class="form-element__label col-lg-4">
+              Container
+            </div>
+            <div class="form-element__input-container col-lg-8">
+              <input class="form-element__input" type="text" value="container">
+            </div>
+          </div>
+          <div class="form-element row">
+            <div class="form-element__label col-lg-4">
+              Row
+            </div>
+            <div class="form-element__input-container col-lg-8">
+              <input class="form-element__input" type="text" value="row">
+            </div>
+          </div>
+          <div class="form-element row">
+            <div class="form-element__label col-lg-4">
+              Column
+            </div>
+            <div class="form-element__input-container col-lg-8">
+              <input class="form-element__input" type="text" value="col-${breakpointName}-${columnsNumber}">
+            </div>
+          </div>
+          <div class="form-element row">
+            <div class="form-element__label col-lg-4">
+              Column pull
+            </div>
+            <div class="form-element__input-container col-lg-8">
+              <input class="form-element__input" type="text" value="col-${breakpointName}-pull-${columnsNumber}">
+            </div>
+          </div>
+          <div class="form-element row">
+            <div class="form-element__label col-lg-4">
+              Column push
+            </div>
+            <div class="form-element__input-container col-lg-8">
+              <input class="form-element__input" type="text" value="col-${breakpointName}-push-${columnsNumber}">
+            </div>
+          </div>
+          <div class="form-element row">
+            <div class="form-element__label col-lg-4">
+              Column offset
+            </div>
+            <div class="form-element__input-container col-lg-8">
+              <input class="form-element__input" type="text" value="col-${breakpointName}-offset-${columnsNumber}">
+            </div>
+          </div>
+          <p class="form-title">
+            Grid Parameters:
+          </p>
+          <div class="form-element row">
+            <div class="form-element__label col-lg-4">
+              Columns number:
+            </div>
+            <div class="form-element__input-container col-lg-8">
+              <input class="form-element__input" type="text" value="12">
+            </div>
+          </div>
+          <div class="form-element row">
+            <div class="form-element__label col-lg-4">
+              Gutter width:
+            </div>
+            <div class="form-element__input-container col-lg-8">
+              <input class="form-element__input" type="text" value="30">
+            </div>
+          </div>
+          <div class="form-element row">
+            <div class="form-element__label col-lg-4">
+              Breakpoints number:
+            </div>
+            <div class="form-element__input-container col-lg-8">
+              <input class="form-element__input" type="text" value="4">
+            </div>
+          </div>
+          <div class="form-section">
+            <div class="form-element row">
+              <div class="form-element__label col-lg-4">
+                Breakpoint name:
+              </div>
+              <div class="form-element__input-container col-lg-8">
+                <input class="form-element__input" type="text" value="xs">
+              </div>
+            </div>
+            <div class="form-element row">
+              <div class="form-element__label col-lg-4">
+                Min-width:
+              </div>
+              <div class="form-element__input-container col-lg-8">
+                <input class="form-element__input" type="text" value="768">
+              </div>
+            </div>
+            <div class="form-element row">
+              <div class="form-element__label col-lg-4">
+                Container width:
+              </div>
+              <div class="form-element__input-container col-lg-8">
+                <input class="form-element__input" type="text" value="100%">
+              </div>
+            </div>
+          </div>
+          <p class="form-title">
+            Intend:
+            <label class="radio-item">
+              <input class="radio-item__input" type="radio" name="indent">
+              <span class="radio-item__icon"></span>
+              <span class="radio-item__label">2 spaces</span>
+            </label>
+            <label class="radio-item">
+              <input class="radio-item__input" type="radio" name="indent">
+              <span class="radio-item__icon"></span>
+              <span class="radio-item__label">4 spaces</span>
+            </label>
+            <label class="radio-item">
+              <input class="radio-item__input" type="radio" name="indent">
+              <span class="radio-item__icon"></span>
+              <span class="radio-item__label">tab</span>
+            </label>
+          </p>
+          <label class="form-title">
+            Minify:
+            <span class="checkbox-item">
+              <input class="checkbox-item__input" type="checkbox">
+              <span class="checkbox-item__icon"></span>
+            </span>
+          </label>
+          <button class="primary-button" type="button">
+            Generate CSS
+          </button>
+        </form>
+        <div class="col-lg-4">
+          <div class="code">
+            <div class="code__title">
+              CSS code
+            </div>
+            <textarea class="code__value"></textarea>
+          </div>
+          <button class="primary-button primary-button_secondary" type="button">
+            Select all
+          </button>
+          <button class="primary-button primary-button_alternative" type="button">
+            Download CSS
+          </button>
+        </div>
+        -->
+      </div>
+    </main>
+    <footer class="footer">
+      <p>
+        Developed by Alexey Oganezov and Ramon Bobassa.
+      </p>
+      <p>
+        © Copyright «Lead Group» 2016
+      </p>
+      <div class="links">
+        <a class="links__item" href="http://leadgroup.cc/">
+          <img src="images/leadgroup.svg" style="width: 170px;" alt="">
+        </a>
+        <a class="links__item" href="https://github.com/leadgroup/setki">
+          <img src="images/github.svg" style="width: 104px;" alt="">
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
